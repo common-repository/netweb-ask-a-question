@@ -1,0 +1,103 @@
+:root{
+	--myAppThemeColor: #ee922d;
+	--myAppThemeHoverColor: #dd780c;
+}
+a{
+	--bs-link-color: #232323;
+	--bs-link-hover-color: var(--bs-link-color);
+	text-decoration: none;
+}
+.appBody .nav{
+	--bs-nav-link-color: #212121;
+	--bs-nav-link-hover-color: var(--bs-nav-link-color);
+}
+.btn-primary{
+	--bs-btn-bg: var(--myAppThemeColor);
+	--bs-btn-border-color: var(--myAppThemeColor);
+	--bs-btn-hover-bg: var(--myAppThemeHoverColor);
+	--bs-btn-hover-border-color: var(--myAppThemeHoverColor);
+}
+.serviceBox {
+    cursor: pointer;
+}
+.flex-and-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+.appBody .nav-item:has(.nav-link.active){
+	border-bottom: 1px solid;
+}
+.appBody .nav-link {
+    --bs-nav-tabs-border-radius: 0;
+	--tabBorderColor: transparent;
+    border-bottom: 2px solid var(--tabBorderColor) !important;
+    border-top: 0;
+    border-right: 1px solid #dee2e6;
+    min-width: 100px;
+}
+.appBody .nav-link.active{
+	--tabBorderColor: var(--myAppThemeColor);
+}
+.appBody .nav-link .tabIcon {
+    width: 30px;
+}
+.askQuestion-dashboard .appHeader .heading{
+	/* display: inline-block; */
+	border-bottom: 2px solid var(--myAppThemeColor) ;
+}
+.askQuestion-dashboard .appLogo{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.myAppTabBody {
+    padding: 50px 0px;
+}
+.wholeChat{
+	max-height: 250px;
+	padding-right: 10px;
+	overflow: auto;
+}
+
+/* loader */
+.custom-loader {
+	z-index: 1100;
+	background: #00000078;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.custom-index {
+	z-index: 9;
+	position: relative;
+} 
+.askques_loader {
+	border: 8px solid #f3f3f3;
+	border-top: 8px solid #3498db;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	max-width: 50px;
+	min-height: 50px;
+	max-height: 50px;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* transform: translate(-50%, -50%);  */
+z-index: 99999;
+}
+.custom-loader.hide{
+display: none;
+}
+
+/* .woocommerce .loader::before {
+	background: none !important;
+} */
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
